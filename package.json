@@ -1,12 +1,12 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest --watchAll"
+    "start": "node bin/config.js && expo start",
+    "android": "node bin/config.js && expo start --android",
+    "ios": "node bin/config.js && expo start --ios",
+    "web": "node bin/config.js && expo start --web",
+    "eject": "node bin/config.js && expo eject",
+    "test": "node bin/config.js && jest --watchAll"
   },
   "jest": {
     "preset": "jest-expo"
@@ -37,7 +37,7 @@
     "@types/react-native": "^0.62.7",
     "babel-preset-expo": "~8.1.0",
     "jest-expo": "~37.0.0",
-    "typescript": "^3.8.3"
-  },
-  "private": true
+    "typescript": "^3.8.3",
+    "yaml": "^1.9.2"
+  }
 }
