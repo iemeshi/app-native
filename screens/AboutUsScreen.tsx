@@ -22,81 +22,79 @@ function LinkText(props: any) {
 
 export default function AboutUsScreen() {
   return (
-    <>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.scrollViewContentContainer}
-      >
-        <View style={styles.imageContainer}>
-          <Image
-            style={styles.image}
-            source={require("../assets/images/logo.png")}
-          />
-          <Image
-            style={styles.typography}
-            source={require("../assets/images/typography.png")}
-            resizeMode={"contain"}
-          />
-        </View>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.scrollViewContentContainer}
+    >
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={require("../assets/images/logo.png")}
+        />
+        <Image
+          style={styles.typography}
+          source={require("../assets/images/typography.png")}
+          resizeMode={"contain"}
+        />
+      </View>
 
-        <View>
-          <Paragraph>
-            イエメシはテイクアウトに対応しているお店を紹介するためのアプリで、
-            <LinkText
-              onPress={() => Linking.openURL("https://github.com/iemeshi/app")}
-            >
-              オープンソース
-            </LinkText>
-            で開発されています。
-          </Paragraph>
-          <Paragraph>
-            掲載されている店舗は、コミュニティのみなさんによってメンテナンスされています。
-          </Paragraph>
+      <View>
+        <Paragraph>
+          イエメシはテイクアウトに対応しているお店を紹介するためのアプリで、
+          <LinkText
+            onPress={() => Linking.openURL("https://github.com/iemeshi/app")}
+          >
+            オープンソース
+          </LinkText>
+          で開発されています。
+        </Paragraph>
+        <Paragraph>
+          掲載されている店舗は、コミュニティのみなさんによってメンテナンスされています。
+        </Paragraph>
 
-          <Text style={styles.h2}>{`${config.title}版について`}</Text>
-          <Paragraph>
-            {config.title}版は以下のリポジトリで開発されています。
-          </Paragraph>
-          <Paragraph>
-            <LinkText onPress={() => Linking.openURL(config.repository)}>
-              {config.repository}
-            </LinkText>
-          </Paragraph>
+        <Text style={styles.h2}>{`${config.title}版について`}</Text>
+        <Paragraph>
+          {config.title}版は以下のリポジトリで開発されています。
+        </Paragraph>
+        <Paragraph>
+          <LinkText onPress={() => Linking.openURL(config.repository)}>
+            {config.repository}
+          </LinkText>
+        </Paragraph>
 
-          {config.form_url && (
-            <>
-              <Paragraph>
-                データの追加や修正をご希望の方は以下のフォームをご利用ください。
-              </Paragraph>
-              <Paragraph>
-                <LinkText onPress={() => Linking.openURL(config.form_url)}>
-                  データの登録/更新申請フォーム
-                </LinkText>
-              </Paragraph>
-            </>
-          )}
+        {config.form_url && (
+          <>
+            <Paragraph>
+              データの追加や修正をご希望の方は以下のフォームをご利用ください。
+            </Paragraph>
+            <Paragraph>
+              <LinkText onPress={() => Linking.openURL(config.form_url)}>
+                データの登録/更新申請フォーム
+              </LinkText>
+            </Paragraph>
+          </>
+        )}
 
-          <Text style={styles.h2}>イエメシに関するお問い合わせ</Text>
-          <Paragraph>
-            <LinkText
-              onPress={() => Linking.openURL("https://geolonia.com/contact/")}
-            >
-              イエメシに関するお問い合わせはこちらからどうぞ。
-            </LinkText>
-          </Paragraph>
-          <Paragraph>
-            掲載店舗に関するお問い合わせにつきましては、ご対応いたしかねますのであらかじめご了承ください。
-          </Paragraph>
-        </View>
-      </ScrollView>
-    </>
+        <Text style={styles.h2}>イエメシに関するお問い合わせ</Text>
+        <Paragraph>
+          <LinkText
+            onPress={() => Linking.openURL("https://geolonia.com/contact/")}
+          >
+            イエメシに関するお問い合わせはこちらからどうぞ。
+          </LinkText>
+        </Paragraph>
+        <Paragraph>
+          掲載店舗に関するお問い合わせにつきましては、ご対応いたしかねますのであらかじめご了承ください。
+        </Paragraph>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fafafa",
+    backgroundColor: "#fff",
   },
   scrollViewContentContainer: {
     padding: 24,

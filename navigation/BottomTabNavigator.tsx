@@ -4,10 +4,9 @@ import { Text } from "react-native";
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
 import ListScreen from "../screens/ListScreen";
-import AllScreen from "../screens/AllScreen";
+import AllOverJapanScreen from "../screens/AllOverJapanScreen";
 import AboutUsScreen from "../screens/AboutUsScreen";
 import GotoForm from "../screens/GotoForm";
-import { State } from "react-native-gesture-handler";
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = "Home";
@@ -45,8 +44,8 @@ export default function BottomTabNavigator({ navigation, route }) {
           }}
         />
         <BottomTab.Screen
-          name="All"
-          component={AllScreen}
+          name="AllOverJapan"
+          component={AllOverJapanScreen}
           options={{
             title: "全国",
             tabBarIcon: ({ focused }) => (
@@ -76,7 +75,7 @@ function getHeaderTitle(routeName: string) {
       return "ホーム";
     case "List":
       return "一覧";
-    case "All":
+    case "AllOverJapan":
       return "全国";
     case "AboutUs":
       return "イエメシについて";
