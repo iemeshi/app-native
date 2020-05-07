@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     zIndex: 99999,
     position: "absolute",
-    bottom: 65,
+    bottom: 30,
   },
   gotoForm: {
     width: 36,
