@@ -3,7 +3,9 @@ import * as React from 'react';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import ListScreen from '../screens/ListScreen';
+import AllScreen from '../screens/AllScreen';
+import AboutUsScreen from '../screens/AboutUsScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -20,16 +22,32 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'ホーム',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="List"
+        component={ListScreen}
         options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          title: '一覧',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-list" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="All"
+        component={AllScreen}
+        options={{
+          title: '全国',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-globe" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="AboutUs"
+        component={AboutUsScreen}
+        options={{
+          title: 'イエメシについて',
+          tabBarIcon: ({ focused }) =>  <TabBarIcon focused={focused} name="md-apps" />,
         }}
       />
     </BottomTab.Navigator>
