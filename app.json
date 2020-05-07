@@ -1,16 +1,12 @@
 {
   "expo": {
-    "name": "app-native",
-    "slug": "app-native",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "name": "iemeshi",
+    "slug": "iemeshi-native",
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/logo.png",
+    "scheme": "iemeshi",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -19,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }
